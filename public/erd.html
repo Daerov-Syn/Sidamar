@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERD Database SiDamar - SAMSAT Manyar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background: #F0F5FA;
+            color: #0F2851;
+            padding: 30px 20px 60px;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            padding: 24px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(15, 40, 81, 0.05);
+            border: 1px solid #D9E7F4;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .header-title h1 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #0F2851;
+            letter-spacing: -0.5px;
+        }
+        .header-title p {
+            font-size: 13px;
+            color: #64748B;
+            margin-top: 4px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        .btn-primary {
+            background: #0B4DA2;
+            color: white;
+            box-shadow: 0 4px 12px rgba(11, 77, 162, 0.25);
+        }
+        .btn-primary:hover {
+            background: #083777;
+            transform: translateY(-1px);
+        }
+        .btn-outline {
+            background: white;
+            color: #0B4DA2;
+            border: 1.5px solid #0B4DA2;
+        }
+        .btn-outline:hover {
+            background: #EDF4FA;
+        }
+        .btn-secondary {
+            background: #16A34A;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #15803D;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 4px 25px rgba(15, 40, 81, 0.06);
+            border: 1px solid #D9E7F4;
+            padding: 30px;
+            overflow-x: auto;
+        }
+        .diagram-wrapper {
+            display: flex;
+            justify-content: center;
+            min-width: 900px;
+            background: #FAFCFE;
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px dashed #CBD5E1;
+        }
+        .table-section {
+            margin-top: 35px;
+        }
+        .table-section h2 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #0F2851;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #F1F5F9;
+        }
+        th {
+            background: #F8FAFC;
+            font-weight: 700;
+            color: #475569;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        tr:hover td {
+            background: #F8FAFC;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .badge-blue { background: #E0F2FE; color: #0284C7; }
+        .badge-green { background: #DCFCE7; color: #16A34A; }
+        .badge-red { background: #FEE2E2; color: #DC2626; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .header, .btn-group { display: none; }
+            .card { box-shadow: none; border: none; padding: 0; }
+            .diagram-wrapper { border: none; background: white; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    {{-- Header with action buttons --}}
+    <div class="header">
+        <div class="header-title">
+            <h1>Entity Relationship Diagram (ERD) — SiDamar</h1>
+            <p>Database Relasional Sistem Informasi Layanan SAMSAT Manyar Surabaya Timur</p>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary" onclick="downloadPNG()">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download Gambar PNG (HD)
+            </button>
+            <button class="btn btn-outline" onclick="downloadSVG()">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Download Vektor SVG
+            </button>
+            <button class="btn btn-outline" onclick="downloadMarkdown()">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Download Markdown (.md)
+            </button>
+            <button class="btn btn-secondary" onclick="window.print()">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                Cetak / Simpan PDF
+            </button>
+        </div>
+    </div>
+
+    {{-- Diagram Card --}}
+    <div class="card">
+        <div class="diagram-wrapper" id="diagram-container">
+            <div class="mermaid" id="mermaid-erd">
+erDiagram
+    admins ||--o{ otps : "has"
+    admins ||--o{ audit_log : "performs"
+    admins |o--o{ sessions : "maintains"
+
+    admins {
+        bigint id PK
+        varchar username UK
+        varchar password
+        varchar email
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    otps {
+        bigint id PK
+        bigint admin_id FK
+        varchar kode
+        varchar kode_hash
+        timestamp expires_at
+        tinyint attempts
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    audit_log {
+        bigint id PK
+        bigint admin_id FK
+        varchar aksi
+        varchar tabel
+        json data_lama
+        json data_baru
+        timestamp waktu
+    }
+
+    kategori_layanan ||--o{ layanan : "classifies"
+    layanan ||--o{ layanan_berkas : "requires"
+    layanan ||--o{ layanan_langkah : "contains"
+
+    kategori_layanan {
+        bigint id PK
+        varchar nama
+        varchar warna
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    layanan {
+        bigint id PK
+        bigint kategori_id FK
+        varchar slug UK
+        varchar nama
+        text deskripsi
+        varchar warna
+        boolean terpublikasi
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    layanan_berkas {
+        bigint id PK
+        bigint layanan_id FK
+        smallint urutan
+        text teks
+        varchar fotokopi
+        boolean wajib_asli
+        varchar keterangan
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    layanan_langkah {
+        bigint id PK
+        bigint layanan_id FK
+        smallint urutan
+        text teks
+        varchar kode_loket
+        text keterangan
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    jenis_kendaraan ||--o{ tarif_pajak : "applies_to"
+
+    jenis_kendaraan {
+        bigint id PK
+        varchar kode UK
+        varchar nama
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    tarif_pajak {
+        bigint id PK
+        bigint jenis_id FK
+        smallint tahun_min
+        smallint tahun_max
+        decimal nilai_dasar
+        decimal tarif_persen
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    aturan_denda {
+        bigint id PK
+        smallint periode_min_bulan
+        smallint periode_max_bulan
+        enum tipe
+        decimal nilai
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    promo_pemutihan {
+        bigint id PK
+        varchar nama
+        date mulai
+        date selesai
+        enum tipe_potongan
+        decimal nilai
+        boolean aktif
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    masukan {
+        bigint id PK
+        varchar nama
+        varchar kontak
+        tinyint rating
+        text isi
+        enum status
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    sessions {
+        varchar id PK
+        bigint user_id
+        varchar ip_address
+        text user_agent
+        longtext payload
+        int last_activity
+    }
+            </div>
+        </div>
+
+        {{-- Table Relasi --}}
+        <div class="table-section">
+            <h2>Kamus Relasi Antar Tabel (Foreign Keys)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tabel Sumber</th>
+                        <th>Foreign Key</th>
+                        <th>Tabel Target</th>
+                        <th>Primary Key</th>
+                        <th>Kardinalitas</th>
+                        <th>On Delete</th>
+                        <th>Fungsi Bisnis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>otps</strong></td>
+                        <td><span class="badge badge-blue">admin_id</span></td>
+                        <td><strong>admins</strong></td>
+                        <td><span class="badge badge-blue">id</span></td>
+                        <td>1 : N</td>
+                        <td><span class="badge badge-red">CASCADE</span></td>
+                        <td>Penyimpanan kode 2FA OTP login per akun admin</td>
+                    </tr>
+                    <tr>
+                        <td><strong>audit_log</strong></td>
+                        <td><span class="badge badge-blue">admin_id</span></td>
+                        <td><strong>admins</strong></td>
+                        <td><span class="badge badge-blue">id</span></td>
+                        <td>1 : N</td>
+                        <td><span class="badge badge-green">SET NULL</span></td>
+                        <td>Jejak audit aksi administrator</td>
+                    </tr>
+                    <tr>
+                        <td><strong>layanan</strong></td>
+                        <td><span class="badge badge-blue">kategori_id</span></td>
+                        <td><strong>kategori_layanan</strong></td>
+                        <td><span class="badge badge-blue">id</span></td>
+                        <td>1 : N</td>
+                        <td><span class="badge badge-blue">RESTRICT</span></td>
+                        <td>Kategori pengelompokan jenis layanan SAMSAT</td>
+                    </tr>
+                    <tr>
+                        <td><strong>layanan_berkas</strong></td>
+                        <td><span class="badge badge-blue">layanan_id</span></td>
+                        <td><strong>layanan</strong></td>
+                        <td><span class="badge badge-blue">id</span></td>
+                        <td>1 : N</td>
+                        <td><span class="badge badge-red">CASCADE</span></td>
+                        <td>Checklist berkas persyaratan yang wajib dibawa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>layanan_langkah</strong></td>
+                        <td><span class="badge badge-blue">layanan_id</span></td>
+                        <td><strong>layanan</strong></td>
+                        <td><span class="badge badge-blue">id</span></td>
+                        <td>1 : N</td>
+                        <td><span class="badge badge-red">CASCADE</span></td>
+                        <td>Alur loket terpandu per jenis layanan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>tarif_pajak</strong></td>
+                        <td><span class="badge badge-blue">jenis_id</span></td>
+                        <td><strong>jenis_kendaraan</strong></td>
+                        <td><span class="badge badge-blue">id</span></td>
+                        <td>1 : N</td>
+                        <td><span class="badge badge-red">CASCADE</span></td>
+                        <td>Tarif persentase dan nilai dasar PKB kendaraan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<canvas id="export-canvas" style="display:none;"></canvas>
+
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        securityLevel: 'loose',
+        er: {
+            useMaxWidth: false,
+            layoutDirection: 'TB'
+        }
+    });
+
+    function getSVGData() {
+        const svgElement = document.querySelector('#mermaid-erd svg') || document.querySelector('.mermaid svg');
+        if (!svgElement) {
+            alert('Diagram sedang dimuat, silakan coba sesaat lagi.');
+            return null;
+        }
+        return svgElement;
+    }
+
+    function downloadSVG() {
+        const svg = getSVGData();
+        if (!svg) return;
+        const serializer = new XMLSerializer();
+        const source = '<?xml version="1.0" standalone="no"?>\r\n' + serializer.serializeToString(svg);
+        const blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'ERD_Database_SiDamar.svg';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    function downloadPNG() {
+        const svg = getSVGData();
+        if (!svg) return;
+
+        const serializer = new XMLSerializer();
+        const svgString = serializer.serializeToString(svg);
+        const svgBlob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+        const URLObj = window.URL || window.webkitURL || window;
+        const blobURL = URLObj.createObjectURL(svgBlob);
+
+        const img = new Image();
+        img.onload = function() {
+            const scale = 2; // High-DPI 2x scale for crystal clear HD
+            const canvas = document.getElementById('export-canvas');
+            canvas.width = (svg.clientWidth || 1600) * scale;
+            canvas.height = (svg.clientHeight || 1200) * scale;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            const pngUrl = canvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.href = pngUrl;
+            a.download = 'ERD_Database_SiDamar.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URLObj.revokeObjectURL(blobURL);
+        };
+        img.src = blobURL;
+    }
+
+    function downloadMarkdown() {
+        const markdownContent = `# Entity Relationship Diagram (ERD) Database SiDamar
+
+Dokumen ini memuat rancangan arsitektur basis data relasional untuk sistem SiDamar (Sistem Informasi Layanan SAMSAT Manyar).
+
+\`\`\`mermaid
+${document.getElementById('mermaid-erd').textContent.trim()}
+\`\`\`
+`;
+        const blob = new Blob([markdownContent], { type: 'text/markdown;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'ERD_DATABASE_SIDAMAR.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+</script>
+
+</body>
+</html>
+
