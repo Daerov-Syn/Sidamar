@@ -47,7 +47,8 @@ ENV PORT=80 \
     SESSION_SECURE_COOKIE=true \
     CACHE_STORE=database \
     QUEUE_CONNECTION=sync \
-    TRUSTED_PROXIES=*
+    TRUSTED_PROXIES=* \
+    VIEW_COMPILED_PATH=/tmp/views
 
 USER www-data
 EXPOSE 80

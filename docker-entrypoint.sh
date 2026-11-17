@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 set -e
 
 echo "=== Memulai SiDamar ==="
@@ -7,7 +7,9 @@ mkdir -p /app/storage/framework/sessions \
          /app/storage/framework/views \
          /app/storage/framework/cache/data \
          /app/storage/logs \
-         /app/bootstrap/cache
+         /app/bootstrap/cache \
+         /tmp/views \
+         /tmp/storage 2>/dev/null || true
 
 php artisan storage:link --quiet || true
 
