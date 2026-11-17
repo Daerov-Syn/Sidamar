@@ -15,6 +15,24 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->ensureViteHotFileIsValid();
         $this->configureRateLimiting();
+        $this->ensureDatabaseIsMigrated();
+    }
+
+    /**
+     * Otomatis jalankan migrasi dan seed awal jika tabel layanan belum ada (misal di cloud serverless).
+     */
+    protected function ensureDatabaseIsMigrated(): void
+    {
+        if (!app()->runningInConsole()) {
+            try {
+                if (!\Illuminate\Support\Facades\Schema::hasTable('layanan')) {
+                    \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+                    \Illuminate\Support\Facades\Artisan::call('db:seed', ['--force' => true]);
+                }
+            } catch (\Throwable $e) {
+                // Biarkan controller atau exception handler yang menangani jika koneksi gagal
+            }
+        }
     }
 
     /**

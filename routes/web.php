@@ -20,6 +20,20 @@ use App\Http\Controllers\Admin\PenggunaController;
 |--------------------------------------------------------------------------
 */
 
+Route::get('/deploy-setup', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        $mig = \Illuminate\Support\Facades\Artisan::output();
+
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--force' => true]);
+        $seed = \Illuminate\Support\Facades\Artisan::output();
+
+        return response("<h2>Setup Database Sukses!</h2><pre>$mig\n$seed</pre><br><a href='/'>Buka Beranda SiDamar</a>");
+    } catch (\Throwable $e) {
+        return response("<h2>Setup Error:</h2><pre>" . $e->getMessage() . "\n\n" . $e->getTraceAsString() . "</pre>", 500);
+    }
+});
+
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 
 Route::prefix('layanan')->name('layanan.')->group(function () {

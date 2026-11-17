@@ -1,5 +1,9 @@
 <?php
 
+// Set tanda serverless Vercel
+$_SERVER['VERCEL'] = '1';
+$_ENV['VERCEL'] = '1';
+
 // Pastikan direktori runtime dan cache di /tmp tersedia
 $runtimeDirs = [
     '/tmp/views',

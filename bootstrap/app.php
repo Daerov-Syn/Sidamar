@@ -37,3 +37,10 @@ return Application::configure(basePath: dirname(__DIR__))
             fn (Request $request) => $request->is('api/*') || $request->expectsJson(),
         );
     })->create();
+
+// Arahkan storage ke /tmp/storage saat di lingkungan serverless Vercel
+if (isset($_SERVER['VERCEL']) || isset($_ENV['VERCEL']) || env('VERCEL') || !is_writable(storage_path())) {
+    $app->useStoragePath('/tmp/storage');
+}
+
+return $app;

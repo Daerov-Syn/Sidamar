@@ -61,9 +61,28 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            'options' => extension_loaded('pdo_mysql') ? (function () {
+                $caPath = env('MYSQL_ATTR_SSL_CA');
+                if (!$caPath || !file_exists($caPath)) {
+                    $candidates = [
+                        '/etc/pki/tls/certs/ca-bundle.crt',
+                        '/etc/ssl/certs/ca-bundle.crt',
+                        '/etc/ssl/certs/ca-certificates.crt',
+                        ini_get('openssl.cafile'),
+                        ini_get('curl.cainfo'),
+                    ];
+                    $caPath = null;
+                    foreach ($candidates as $cand) {
+                        if ($cand && file_exists($cand)) {
+                            $caPath = $cand;
+                            break;
+                        }
+                    }
+                }
+                return array_filter([
+                    Mysql::ATTR_SSL_CA => $caPath,
+                ]);
+            })() : [],
         ],
 
         'mariadb' => [
@@ -81,9 +100,28 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            'options' => extension_loaded('pdo_mysql') ? (function () {
+                $caPath = env('MYSQL_ATTR_SSL_CA');
+                if (!$caPath || !file_exists($caPath)) {
+                    $candidates = [
+                        '/etc/pki/tls/certs/ca-bundle.crt',
+                        '/etc/ssl/certs/ca-bundle.crt',
+                        '/etc/ssl/certs/ca-certificates.crt',
+                        ini_get('openssl.cafile'),
+                        ini_get('curl.cainfo'),
+                    ];
+                    $caPath = null;
+                    foreach ($candidates as $cand) {
+                        if ($cand && file_exists($cand)) {
+                            $caPath = $cand;
+                            break;
+                        }
+                    }
+                }
+                return array_filter([
+                    Mysql::ATTR_SSL_CA => $caPath,
+                ]);
+            })() : [],
         ],
 
         'pgsql' => [
