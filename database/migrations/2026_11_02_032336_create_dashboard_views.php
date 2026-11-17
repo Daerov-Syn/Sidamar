@@ -7,8 +7,9 @@ return new class extends Migration
 {
     public function up(): void
     {
+        DB::statement("DROP VIEW IF EXISTS v_dashboard_ringkasan");
         DB::statement("
-            CREATE OR REPLACE VIEW v_dashboard_ringkasan AS
+            CREATE VIEW v_dashboard_ringkasan AS
             SELECT 
                 (SELECT COUNT(*) FROM layanan WHERE terpublikasi = 1) AS total_layanan,
                 (SELECT COUNT(*) FROM masukan) AS total_masukan,
@@ -16,8 +17,9 @@ return new class extends Migration
                 COALESCE((SELECT AVG(rating) FROM masukan), 0) AS rata_rating;
         ");
 
+        DB::statement("DROP VIEW IF EXISTS v_status_masukan");
         DB::statement("
-            CREATE OR REPLACE VIEW v_status_masukan AS
+            CREATE VIEW v_status_masukan AS
             SELECT 
                 status,
                 COUNT(*) AS jumlah

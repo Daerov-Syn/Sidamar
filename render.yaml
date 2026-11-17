@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: sidamar
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: singapore
+    envVars:
+      - key: APP_NAME
+        value: SiDamar
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        value: base64:P9AXn2L1rNr4i3fVAD5031Ljgy6ZWiuvMdgp8OH3GC0=
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: TRUSTED_PROXIES
+        value: "*"
+      - key: MAIL_MAILER
+        value: log

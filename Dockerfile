@@ -5,7 +5,7 @@ FROM dunglas/frankenphp:1-php8.5-bookworm AS base
 WORKDIR /app
 
 RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
-    && install-php-extensions pdo_mysql mbstring intl zip opcache
+    && install-php-extensions pdo_mysql pdo_sqlite mbstring intl zip opcache
 
 FROM base AS dependencies
 
@@ -35,7 +35,7 @@ COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh \
     && setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/frankenphp \
-    && chown -R www-data:www-data /config/caddy /data/caddy /app/storage /app/bootstrap/cache
+    && chown -R www-data:www-data /config/caddy /data/caddy /app/storage /app/bootstrap/cache /app/database
 
 ENV PORT=80 \
     APP_ENV=production \
