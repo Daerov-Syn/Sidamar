@@ -10,14 +10,6 @@
             'kategori_label' => 'PEMBLOKIRAN & PELAPORAN',
             'icon' => 'ban',
             'subtitle' => 'Blokir Lapor Jual ERI & Layanan Progresif',
-            'loket' => [
-                ['kode' => 'MTC', 'nama' => 'Mesin Antrean MTC', 'deskripsi' => 'Ambil nomor antrian di Mesin Antrian Lobby', 'x' => '18%', 'y' => '35%'],
-                ['kode' => 'VR', 'nama' => 'Loket Keabsahan VR', 'deskripsi' => 'Verifikasi keabsahan data kepemilikan lama', 'x' => '32%', 'y' => '65%'],
-                ['kode' => 'FORM', 'nama' => 'Loket Formulir Lapor Jual', 'deskripsi' => 'Pengambilan & pengisian formulir pernyataan', 'x' => '48%', 'y' => '65%'],
-                ['kode' => 'ERI', 'nama' => 'Loket ERI Pemblokiran', 'deskripsi' => 'Proses pemblokiran data kendaraan di sistem ERI', 'x' => '65%', 'y' => '45%'],
-                ['kode' => 'TKL', 'nama' => 'Verifikasi & Validasi Petugas', 'deskripsi' => 'Pengecekan akhir berkas oleh petugas verifikator', 'x' => '75%', 'y' => '45%'],
-                ['kode' => 'PLT', 'nama' => 'Loket Penyerahan Bukti', 'deskripsi' => 'Penerimaan tanda bukti blokir lapor jual resmi', 'x' => '85%', 'y' => '65%'],
-            ],
             'faqs' => [
                 [
                     'q' => 'Apakah ada biaya untuk lapor jual kendaraan?',
@@ -41,13 +33,6 @@
             'kategori_label' => 'MUTASI KELUAR DAERAH',
             'icon' => 'logout',
             'subtitle' => 'Layanan Pindah Daerah / Fiskal Antardaerah',
-            'loket' => [
-                ['kode' => 'FISIK', 'nama' => 'Loket Cek Fisik', 'deskripsi' => 'Gesek nomor rangka & mesin di area cek fisik', 'x' => '80%', 'y' => '78%'],
-                ['kode' => 'MTC', 'nama' => 'Mesin Antrean', 'deskripsi' => 'Ambil nomor antrian mutasi keluar', 'x' => '18%', 'y' => '35%'],
-                ['kode' => 'FISKAL', 'nama' => 'Loket Fiskal Antardaerah', 'deskripsi' => 'Penerbitan surat keterangan fiskal antardaerah', 'x' => '35%', 'y' => '65%'],
-                ['kode' => 'KSR', 'nama' => 'Kasir PNBP Cabut Berkas', 'deskripsi' => 'Pembayaran PNBP penerbitan surat mutasi keluar', 'x' => '65%', 'y' => '45%'],
-                ['kode' => 'ARSIP', 'nama' => 'Loket Pengambilan Berkas', 'deskripsi' => 'Pengambilan bundel berkas cabutan induk', 'x' => '80%', 'y' => '50%'],
-            ],
             'faqs' => [
                 [
                     'q' => 'Berapa lama proses pencabutan berkas mutasi keluar?',
@@ -67,13 +52,6 @@
             'kategori_label' => 'MUTASI MASUK DAERAH',
             'icon' => 'login',
             'subtitle' => 'Pendaftaran Kendaraan Masuk dari Luar Daerah ke SAMSAT Manyar',
-            'loket' => [
-                ['kode' => 'FISIK', 'nama' => 'Cek Fisik Samsat Manyar', 'deskripsi' => 'Pengecekan fisik kendaraan kedatangan mutasi', 'x' => '80%', 'y' => '78%'],
-                ['kode' => 'MTC', 'nama' => 'Mesin Antrean', 'deskripsi' => 'Ambil tiket antrian pendaftaran mutasi masuk', 'x' => '18%', 'y' => '35%'],
-                ['kode' => 'REG', 'nama' => 'Loket Pendaftaran Berkas', 'deskripsi' => 'Penyerahan berkas cabutan dari SAMSAT asal', 'x' => '35%', 'y' => '65%'],
-                ['kode' => 'KSR', 'nama' => 'Kasir Pembayaran PKB & BBN', 'deskripsi' => 'Pembayaran PKB Jawa Timur dan biaya cetak dokumen', 'x' => '65%', 'y' => '45%'],
-                ['kode' => 'PLT', 'nama' => 'Loket Penyerahan STNK & Plat', 'deskripsi' => 'Pengambilan STNK baru dan plat nomor L', 'x' => '85%', 'y' => '65%'],
-            ],
             'faqs' => [
                 [
                     'q' => 'Apakah berkas cabutan dari Samsat asal memiliki masa berlaku?',
@@ -89,13 +67,6 @@
             'kategori_label' => 'KENDARAAN BARU',
             'icon' => 'plus',
             'subtitle' => 'Pendaftaran Faktur Dealer BPKB / STNK Kendaraan Baru',
-            'loket' => [
-                ['kode' => 'FISIK', 'nama' => 'Cek Fisik Kendaraan Baru', 'deskripsi' => 'Gesek nomor rangka dan mesin dealer', 'x' => '80%', 'y' => '78%'],
-                ['kode' => 'REG', 'nama' => 'Loket Pendaftaran Faktur', 'deskripsi' => 'Pemeriksaan faktur, sertifikat NIK & berkas dealer', 'x' => '35%', 'y' => '65%'],
-                ['kode' => 'BBN', 'nama' => 'Loket BBN-KB I', 'deskripsi' => 'Penetapan nilai Bea Balik Nama Kendaraan Baru', 'x' => '50%', 'y' => '65%'],
-                ['kode' => 'KSR', 'nama' => 'Kasir Pembayaran', 'deskripsi' => 'Pembayaran BBN-KB, PKB tahun pertama, SWDKLLJ & PNBP', 'x' => '65%', 'y' => '45%'],
-                ['kode' => 'TNKB', 'nama' => 'Loket Cetak STNK & Plat TNKB', 'deskripsi' => 'Penerbitan STNK dan pencetakan plat nomor baru', 'x' => '85%', 'y' => '65%'],
-            ],
             'faqs' => [
                 [
                     'q' => 'Berapa lama proses pembuatan STNK kendaraan baru?',
@@ -111,13 +82,6 @@
             'kategori_label' => 'DUPLIKAT STNK',
             'icon' => 'document',
             'subtitle' => 'Penerbitan STNK Pengganti karena Hilang atau Rusak',
-            'loket' => [
-                ['kode' => 'FISIK', 'nama' => 'Cek Fisik Kendaraan', 'deskripsi' => 'Wajib gesek nomor rangka & mesin untuk konfirmasi keaslian', 'x' => '80%', 'y' => '78%'],
-                ['kode' => 'MTC', 'nama' => 'Mesin Antrean', 'deskripsi' => 'Ambil tiket antrian duplikat STNK', 'x' => '18%', 'y' => '35%'],
-                ['kode' => 'LAPOR', 'nama' => 'Loket Verifikasi Laporan Hilang', 'deskripsi' => 'Pengecekan surat kehilangan kepolisian & iklan koran/radio', 'x' => '40%', 'y' => '65%'],
-                ['kode' => 'KSR', 'nama' => 'Kasir Biaya PNBP STNK', 'deskripsi' => 'Pembayaran biaya cetak STNK duplikat resmi', 'x' => '65%', 'y' => '45%'],
-                ['kode' => 'PLT', 'nama' => 'Loket Penyerahan STNK Duplikat', 'deskripsi' => 'Pengambilan lembar STNK pengganti resmi', 'x' => '85%', 'y' => '65%'],
-            ],
             'faqs' => [
                 [
                     'q' => 'Apa syarat utama jika STNK hilang?',
@@ -133,14 +97,6 @@
             'kategori_label' => 'PERPANJANGAN 5 TAHUN',
             'icon' => 'calendar',
             'subtitle' => 'Pajak 5 Tahunan, Ganti Plat Nomor (TNKB) & Pindah Alamat',
-            'loket' => [
-                ['kode' => 'FISIK', 'nama' => 'Area Cek Fisik & Legalisir', 'deskripsi' => 'Cek fisik gesek nomor mesin & rangka di area timur', 'x' => '80%', 'y' => '78%'],
-                ['kode' => 'MTC', 'nama' => 'Mesin Antrean Utama', 'deskripsi' => 'Ambil nomor antrian perpanjangan 5 tahun', 'x' => '18%', 'y' => '35%'],
-                ['kode' => 'REG', 'nama' => 'Loket Pendaftaran 5 Tahun', 'deskripsi' => 'Pemeriksaan berkas KTP, STNK, BPKB & hasil cek fisik', 'x' => '35%', 'y' => '65%'],
-                ['kode' => 'KSR', 'nama' => 'Kasir Pembayaran PKB & TNKB', 'deskripsi' => 'Pembayaran PKB 5 tahunan + PNBP STNK & PNBP Plat TNKB', 'x' => '65%', 'y' => '45%'],
-                ['kode' => 'CETAK', 'nama' => 'Loket Penyerahan STNK', 'deskripsi' => 'Pengambilan lembar STNK dan notice pajak baru', 'x' => '75%', 'y' => '65%'],
-                ['kode' => 'TNKB', 'nama' => 'Workshop Cetak Plat TNKB', 'deskripsi' => 'Pengambilan sepasang plat nomor kaleng baru', 'x' => '85%', 'y' => '65%'],
-            ],
             'faqs' => [
                 [
                     'q' => 'Apakah kendaraan harus dibawa untuk pajak 5 tahunan?',
@@ -160,13 +116,6 @@
             'kategori_label' => 'BEA BALIK NAMA (BBN INTERN)',
             'icon' => 'swap',
             'subtitle' => 'Balik Nama Kendaraan Bermotor dalam Wilayah Surabaya Timur',
-            'loket' => [
-                ['kode' => 'FISIK', 'nama' => 'Loket Cek Fisik Kendaraan', 'deskripsi' => 'Pemeriksaan keaslian nomor rangka & nomor mesin', 'x' => '80%', 'y' => '78%'],
-                ['kode' => 'MTC', 'nama' => 'Mesin Antrean', 'deskripsi' => 'Ambil tiket antrian pendaftaran balik nama', 'x' => '18%', 'y' => '35%'],
-                ['kode' => 'BBN', 'nama' => 'Loket Verifikasi Balik Nama', 'deskripsi' => 'Validasi kwitansi jual beli bermaterai & KTP pembeli', 'x' => '40%', 'y' => '65%'],
-                ['kode' => 'KSR', 'nama' => 'Kasir Pembayaran BBN-KB', 'deskripsi' => 'Pelunasan Bea Balik Nama, PKB, SWDKLLJ & PNBP', 'x' => '65%', 'y' => '45%'],
-                ['kode' => 'PLT', 'nama' => 'Loket Penyerahan Dokumen', 'deskripsi' => 'Pengambilan STNK baru atas nama pemilik baru', 'x' => '85%', 'y' => '65%'],
-            ],
             'faqs' => [
                 [
                     'q' => 'Apakah perlu membawa KTP pemilik lama saat balik nama?',
@@ -184,12 +133,6 @@
         'kategori_label' => strtoupper($layanan->kategori->nama ?? 'LAYANAN SAMSAT'),
         'icon' => 'document',
         'subtitle' => $layanan->deskripsi ?? 'Informasi persyaratan dan alur layanan resmi KB SAMSAT Surabaya Timur',
-        'loket' => [
-            ['kode' => 'MTC', 'nama' => 'Mesin Antrean', 'deskripsi' => 'Ambil tiket antrian di lobby', 'x' => '18%', 'y' => '35%'],
-            ['kode' => 'REG', 'nama' => 'Loket Pendaftaran', 'deskripsi' => 'Pemeriksaan kelengkapan berkas', 'x' => '35%', 'y' => '65%'],
-            ['kode' => 'KSR', 'nama' => 'Loket Kasir', 'deskripsi' => 'Pembayaran tagihan resmi', 'x' => '65%', 'y' => '45%'],
-            ['kode' => 'PLT', 'nama' => 'Loket Penyerahan', 'deskripsi' => 'Pengambilan dokumen hasil layanan', 'x' => '85%', 'y' => '65%'],
-        ],
         'faqs' => [
             [
                 'q' => 'Bagaimana jika BPKB masih dalam agunan / leasing?',
@@ -209,37 +152,18 @@
     $kategoriPill = $meta['kategori_label'];
     $iconType = $meta['icon'];
     $subtitleDesc = $meta['subtitle'];
-    $loketList = $meta['loket'];
     $faqList = $meta['faqs'];
     $berkasCount = $layanan->berkas->count();
     $langkahCount = $layanan->langkah->count();
 @endphp
 
 <div class="bg-[#EEF5FB] min-h-screen py-6 sm:py-10"
-     x-data="{
-        checkedDocs: [],
-        totalDocs: {{ $berkasCount }},
-        activeStep: 1,
-        activePin: null,
-        faqSearch: '',
-        faqs: {{ json_encode($faqList) }},
-        get readyCount() { return this.checkedDocs.length; },
-        get progressPercent() { return this.totalDocs > 0 ? Math.round((this.readyCount / this.totalDocs) * 100) : 0; },
-        toggleDoc(idx) {
-            if (this.checkedDocs.includes(idx)) {
-                this.checkedDocs = this.checkedDocs.filter(i => i !== idx);
-            } else {
-                this.checkedDocs.push(idx);
-            }
-        },
-        filteredFaqs() {
-            if (!this.faqSearch.trim()) return this.faqs;
-            const q = this.faqSearch.toLowerCase();
-            return this.faqs.filter(item => item.q.toLowerCase().includes(q) || item.a.toLowerCase().includes(q));
-        }
-     }">
+     x-data="serviceDetail"
+     data-storage-key="sidamar_docs_{{ $layanan->slug }}"
+     data-document-count="{{ $berkasCount }}"
+     data-faqs="{{ json_encode($faqList) }}">
 
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {{-- Top Navigation: Back Button + Breadcrumbs --}}
         <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
@@ -323,47 +247,74 @@
             <div class="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl border border-[#D9E7F4] shadow-sm p-6 sm:p-8 flex flex-col justify-between">
                 <div>
                     {{-- Column Header --}}
-                    <div class="flex items-start gap-3 pb-4 border-b border-gray-100">
-                        <div class="w-8 h-8 rounded-lg bg-[#EAF2FB] text-[#1E70D0] flex items-center justify-center shrink-0 mt-0.5">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
+                    <div class="flex items-start justify-between gap-3 pb-4 border-b border-gray-100">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-[#EAF2FB] text-[#1E70D0] flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-base sm:text-lg font-bold text-[#0F2851] leading-tight">
+                                    Dokumen yang Harus Dibawa
+                                </h2>
+                                <p class="text-xs text-gray-500 mt-0.5">
+                                    Centang dokumen yang sudah Anda siapkan <strong class="text-gray-700 font-semibold">sebelum berangkat</strong>
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h2 class="text-base sm:text-lg font-bold text-[#0F2851] leading-tight">
-                                Dokumen yang Harus Dibawa
-                            </h2>
-                            <p class="text-xs text-gray-400 mt-0.5">
-                                Centang dokumen yang sudah Anda siapkan <strong class="text-gray-700 font-semibold">sebelum berangkat</strong>
-                            </p>
-                        </div>
+
+                        @if($berkasCount > 0)
+                            <button type="button"
+                                    x-on:click="markAll()"
+                                    class="shrink-0 text-xs font-semibold text-[#1E70D0] hover:text-[#0B4DA2] hover:underline px-2 py-1 rounded transition"
+                                    x-text="isAllReady ? 'Batalkan Semua' : 'Pilih Semua'">
+                                Pilih Semua
+                            </button>
+                        @endif
                     </div>
 
                     {{-- Checklist Items --}}
-                    <div class="space-y-3 mt-5">
+                    <div class="space-y-3 mt-5" role="group" aria-label="Daftar berkas persyaratan">
                         @forelse($layanan->berkas as $index => $b)
                             @php
                                 $isAsli = isset($b->wajib_asli) ? (bool)$b->wajib_asli : (stripos($b->teks, 'asli') !== false);
                                 $fotokopiText = !empty($b->fotokopi) ? $b->fotokopi : (stripos($b->teks, 'fotokopi') !== false ? 'Fotokopi 1×' : null);
                             @endphp
-                            <div x-on:click="toggleDoc({{ $index }})"
-                                 class="p-3.5 rounded-xl border transition-all cursor-pointer select-none flex items-start justify-between gap-3"
-                                 :class="checkedDocs.includes({{ $index }}) ? 'bg-[#F2F8FD] border-[#1E70D0]/40' : 'bg-[#FAFCFE] border-gray-100 hover:border-gray-200'">
-                                <div class="flex items-start gap-3">
-                                    {{-- Custom Checkbox --}}
-                                    <div class="w-5 h-5 rounded-full border-2 transition-colors flex items-center justify-center shrink-0 mt-0.5"
-                                         :class="checkedDocs.includes({{ $index }}) ? 'bg-[#1E70D0] border-[#1E70D0] text-white' : 'border-gray-300 bg-white'">
-                                        <svg x-show="checkedDocs.includes({{ $index }})" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button type="button"
+                                    role="checkbox"
+                                    :aria-checked="checkedDocs.includes({{ $index }})"
+                                    x-on:click="toggleDoc({{ $index }})"
+                                    class="w-full text-left p-3.5 rounded-xl border transition-all duration-200 cursor-pointer select-none flex items-center justify-between gap-3 group focus:outline-none focus:ring-2 focus:ring-[#1E70D0]/50"
+                                    :class="checkedDocs.includes({{ $index }}) ? 'bg-[#F0FDF4] border-emerald-300 shadow-xs' : 'bg-[#FAFCFE] border-gray-200/80 hover:bg-white hover:border-[#BFDBFE] hover:shadow-xs'">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    {{-- Custom Checkbox Circle --}}
+                                    <div class="w-6 h-6 rounded-full border-2 transition-all duration-200 flex items-center justify-center shrink-0"
+                                         :class="checkedDocs.includes({{ $index }}) ? 'bg-emerald-600 border-emerald-600 text-white scale-105' : 'border-gray-300 bg-white group-hover:border-[#1E70D0] text-transparent'">
+                                        <svg class="w-3.5 h-3.5 transition-transform duration-200"
+                                             :class="checkedDocs.includes({{ $index }}) ? 'scale-100 opacity-100' : 'scale-75 opacity-0'"
+                                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <span class="text-xs sm:text-sm font-medium transition-colors leading-snug block"
-                                              :class="checkedDocs.includes({{ $index }}) ? 'text-[#0F2851] font-semibold' : 'text-gray-700'">
-                                            {{ $b->teks }}
-                                        </span>
+                                    <div class="min-w-0">
+                                        <div class="flex items-center gap-2 flex-wrap">
+                                            <span class="text-xs sm:text-sm font-medium transition-colors leading-snug"
+                                                  :class="checkedDocs.includes({{ $index }}) ? 'text-gray-900 font-semibold line-through decoration-emerald-500/70' : 'text-gray-800'">
+                                                {{ $b->teks }}
+                                            </span>
+                                            <span x-show="checkedDocs.includes({{ $index }})"
+                                                  x-cloak
+                                                  class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-100/90 px-2 py-0.5 rounded-full">
+                                                <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                                </svg>
+                                                Sudah Siap
+                                            </span>
+                                        </div>
                                         @if(!empty($b->keterangan))
-                                            <span class="text-[11px] text-gray-500 mt-0.5 block">
+                                            <span class="text-[11px] text-gray-500 mt-0.5 block truncate"
+                                                  :class="checkedDocs.includes({{ $index }}) ? 'text-emerald-700/80' : 'text-gray-500'">
                                                 {{ $b->keterangan }}
                                             </span>
                                         @endif
@@ -373,7 +324,7 @@
                                 {{-- Badges on Right --}}
                                 <div class="flex flex-col sm:flex-row items-end sm:items-center gap-1 shrink-0">
                                     @if($isAsli)
-                                        <span class="inline-block bg-[#E8F8EE] text-[#16A34A] border border-[#B9E9CA] text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+                                        <span class="inline-block bg-[#E8F8EE] text-[#16A34A] border border-[#B9E9CA] text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase tracking-wider">
                                             ASLI
                                         </span>
                                     @endif
@@ -383,7 +334,7 @@
                                         </span>
                                     @endif
                                 </div>
-                            </div>
+                            </button>
                         @empty
                             <p class="text-xs text-gray-400 italic py-4">Belum ada daftar berkas khusus yang tercatat.</p>
                         @endforelse
@@ -391,15 +342,27 @@
 
                     {{-- Progress Bar --}}
                     <div class="mt-6 pt-4 border-t border-gray-100">
-                        <div class="flex items-center justify-between text-xs text-gray-500 mb-1.5">
+                        <div class="flex items-center justify-between text-xs text-gray-600 mb-1.5">
                             <span class="font-medium">
-                                <span x-text="readyCount" class="font-bold text-[#1E70D0]"></span> dari <span x-text="totalDocs" class="font-bold"></span> dokumen siap
+                                <span x-text="readyCount" class="font-bold text-[#1E70D0]"></span> dari <span x-text="totalDocs" class="font-bold text-gray-800"></span> dokumen siap dibawa
                             </span>
-                            <span x-text="`${progressPercent}%`" class="font-mono font-bold text-[#1E70D0]"></span>
+                            <span x-text="progressPercent + '%'"
+                                  class="font-mono font-bold"
+                                  :class="isAllReady ? 'text-emerald-600' : 'text-[#1E70D0]'"></span>
                         </div>
-                        <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                            <div class="bg-[#1E70D0] h-full rounded-full transition-all duration-300"
-                                 :style="`width: ${progressPercent}%`"></div>
+                        <div class="w-full bg-gray-100 h-2.5 rounded-full overflow-hidden p-0.5">
+                            <div class="h-full rounded-full transition-all duration-300"
+                                 :class="isAllReady ? 'bg-emerald-500' : 'bg-[#1E70D0]'"
+                                 :style="{ width: progressPercent + '%' }"></div>
+                        </div>
+
+                        {{-- Alert when all ready --}}
+                        <div x-show="isAllReady" x-cloak x-transition
+                             class="mt-3 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span class="font-semibold">Semua dokumen persyaratan sudah lengkap! Anda siap berangkat ke loket SAMSAT.</span>
                         </div>
                     </div>
                 </div>
@@ -440,20 +403,26 @@
                         </div>
                     </div>
 
+                    @if($langkahCount > 0)
+                        <button type="button" x-on:click="$dispatch('open-service-map', { step: 0 })"
+                                class="mt-4 min-h-11 inline-flex items-center gap-2 rounded-xl bg-[#0B4DA2] px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#09418A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                            Lihat Alur di Denah <span aria-hidden="true">?</span>
+                        </button>
+                    @endif
+
                     {{-- Steps Accordion / List --}}
                     <div class="space-y-3 mt-5">
                         @forelse($layanan->langkah as $idx => $l)
                             @php
-                                $stepNum = $l->urutan ?: ($idx + 1);
-                                $loketItem = $loketList[$idx % count($loketList)] ?? null;
-                                $loketCode = !empty($l->kode_loket) ? $l->kode_loket : ($loketItem['kode'] ?? 'LKT');
+                                $stepNum = $idx + 1;
+                                $loketCode = $l->kode_loket;
                                 $loketName = $l->teks;
-                                $stepKeterangan = !empty($l->keterangan) ? $l->keterangan : ($loketItem['deskripsi'] ?? $l->teks);
+                                $stepKeterangan = $l->keterangan ?: $l->teks;
                             @endphp
                             <div x-data="{ open: {{ $stepNum === 1 ? 'true' : 'false' }} }"
                                  class="rounded-xl border border-gray-100 bg-[#FAFCFE] transition overflow-hidden">
                                 <button type="button"
-                                        x-on:click="open = !open; activePin = '{{ $loketCode }}'"
+                                        x-on:click="open = !open"
                                         class="w-full p-3.5 text-left flex items-center justify-between gap-3 hover:bg-[#F2F8FD] transition">
                                     <div class="flex items-center gap-3">
                                         {{-- Step Number Circle --}}
@@ -486,11 +455,10 @@
                                     <p class="leading-relaxed">
                                         <strong>Petunjuk:</strong> {{ $stepKeterangan }}
                                     </p>
-                                    @if($loketItem)
-                                        <p class="text-[11px] text-[#1E70D0] mt-1.5 font-medium flex items-center gap-1">
-                                            <span>📍 Lokasi:</span> {{ $loketItem['deskripsi'] }}
-                                        </p>
-                                    @endif
+                                    <button type="button" x-on:click="$dispatch('open-service-map', { step: {{ $idx }} })"
+                                            class="mt-2 min-h-11 text-[#1E70D0] font-semibold hover:underline">
+                                        Lihat tahap ini di denah &rarr;
+                                    </button>
                                 </div>
                             </div>
                         @empty
@@ -526,97 +494,7 @@
             </div>
         </div>
 
-        {{-- 3. Denah Gedung & Lokasi Loket --}}
-        <div class="bg-white rounded-2xl sm:rounded-3xl border border-[#D9E7F4] shadow-sm p-6 sm:p-8 mb-8">
-            <div class="mb-5">
-                <h2 class="text-lg sm:text-xl font-bold text-[#0F2851] tracking-tight">
-                    Denah Gedung &amp; Lokasi Loket
-                </h2>
-                <p class="text-xs sm:text-sm text-gray-500 mt-0.5">
-                    KB SAMSAT Surabaya Timur · Jl. Manyar Kertoarjo No. 1
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                {{-- Left: Floor Plan Map Schematic SVG --}}
-                <div class="lg:col-span-8 bg-[#F4F9FD] border border-[#CFE2F3] rounded-2xl p-4 sm:p-6 relative overflow-hidden shadow-inner">
-                    {{-- Schematic Layout Map --}}
-                    <div class="relative w-full aspect-[16/9] min-h-[260px] bg-white rounded-xl border-2 border-dashed border-[#B8D5ED] p-3 text-xs select-none">
-                        {{-- Doors --}}
-                        <div class="absolute top-2 left-3 bg-[#0B4DA2] text-white font-bold text-[10px] px-2.5 py-1 rounded-md shadow-sm">
-                            Pintu Masuk
-                        </div>
-                        <div class="absolute top-2 right-3 bg-[#16A34A] text-white font-bold text-[10px] px-2.5 py-1 rounded-md shadow-sm">
-                            Pintu Keluar
-                        </div>
-
-                        {{-- Lobby Hall --}}
-                        <div class="absolute top-10 left-3 right-3 h-14 bg-[#EDF5FC] rounded-lg border border-[#D0E4F5] flex items-center justify-center text-gray-400 font-semibold text-[11px]">
-                            Lobby / Tangga
-                        </div>
-
-                        {{-- Main Hall Sections --}}
-                        <div class="absolute top-28 left-3 w-[55%] bottom-3 bg-[#F8FAFC] rounded-lg border border-gray-200 p-2 flex flex-col justify-end text-gray-400 text-[11px] font-medium">
-                            <span class="text-center pb-2">Ruang Layanan Utama</span>
-                        </div>
-
-                        {{-- Cashier & Physical Check --}}
-                        <div class="absolute top-28 right-3 w-[38%] h-20 bg-[#EDF5FC] rounded-lg border border-[#D0E4F5] flex items-center justify-center text-gray-400 font-medium text-[11px]">
-                            Area Kasir
-                        </div>
-                        <div class="absolute bottom-3 right-3 w-[38%] h-16 bg-[#E8F8EE] rounded-lg border border-[#B9E9CA] flex items-center justify-center text-gray-500 font-medium text-[11px]">
-                            Area Parkir &amp; Cek Fisik
-                        </div>
-
-                        {{-- Dynamic Loket Pins on Map --}}
-                        @foreach($loketList as $lkt)
-                            <div class="absolute transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125 cursor-pointer z-10"
-                                 style="left: {{ $lkt['x'] }}; top: {{ $lkt['y'] }};"
-                                 x-on:click="activePin = '{{ $lkt['kode'] }}'">
-                                <div class="px-2 py-1 rounded-full font-bold text-[10px] shadow-md border flex items-center gap-1 transition-colors"
-                                     :class="activePin === '{{ $lkt['kode'] }}' ? 'bg-amber-400 text-gray-900 border-amber-500 ring-2 ring-amber-300' : 'bg-[#1E70D0] text-white border-white'">
-                                    <span>{{ $lkt['kode'] }}</span>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-
-                    <p class="text-[11px] text-gray-400 text-center mt-2.5">
-                        Arahkan kursor ke pin atau klik loket di samping untuk melihat lokasi loket di gedung
-                    </p>
-                </div>
-
-                {{-- Right: Lokasi Loket Layanan Ini --}}
-                <div class="lg:col-span-4 space-y-3">
-                    <h3 class="text-xs sm:text-sm font-bold text-[#0F2851] uppercase tracking-wider mb-2">
-                        Lokasi Loket Layanan Ini
-                    </h3>
-
-                    @foreach($loketList as $lkt)
-                        <div x-on:click="activePin = '{{ $lkt['kode'] }}'"
-                             class="p-3.5 rounded-xl border transition-all cursor-pointer flex items-center justify-between gap-3 shadow-sm"
-                             :class="activePin === '{{ $lkt['kode'] }}' ? 'bg-[#EDF5FD] border-[#1E70D0] ring-1 ring-[#1E70D0]' : 'bg-white border-gray-100 hover:border-gray-200'">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-[#0B4DA2] text-white font-mono font-bold text-xs flex items-center justify-center shrink-0">
-                                    {{ $lkt['kode'] }}
-                                </div>
-                                <div>
-                                    <h4 class="text-xs font-bold text-[#0F2851] leading-tight">
-                                        {{ $lkt['nama'] }}
-                                    </h4>
-                                    <span class="text-[10px] text-[#1E70D0] font-medium mt-0.5 block">
-                                        Lihat di peta &rarr;
-                                    </span>
-                                </div>
-                            </div>
-                            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
+        <x-service-map :layanan="$layanan" />
 
         {{-- 4. Jam Operasional & Indikator Keramaian (Big Blue Card matching Mockup) --}}
         <div class="bg-[#0B4DA2] text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 mb-8 shadow-lg">

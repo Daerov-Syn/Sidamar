@@ -156,8 +156,10 @@
             </div>
         @endif
 
-        <main class="flex-1 p-6 sm:p-10 overflow-y-auto">
-            @yield('content')
+        <main class="flex-1 p-6 sm:p-8 lg:p-10 overflow-y-auto">
+            <div class="max-w-[1440px] mx-auto w-full">
+                @yield('content')
+            </div>
         </main>
     </div>
 </div>

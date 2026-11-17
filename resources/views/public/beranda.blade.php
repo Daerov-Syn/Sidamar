@@ -5,7 +5,7 @@
 @section('content')
 {{-- Hero Section --}}
 <section class="bg-[#0B4DA2] text-white pt-8 pb-14 overflow-hidden">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {{-- Left column --}}
             <div class="lg:col-span-7 space-y-5">
@@ -64,7 +64,7 @@
                 <div class="relative w-72 sm:w-80 md:w-96 lg:w-[420px] select-none">
                     <img src="{{ asset('images/hero-mascot-transparent.png') }}"
                          alt="Maskot SiDamar Samsat Manyar"
-                         class="w-full h-auto object-contain"
+                         class="w-full h-auto object-contain drop-shadow-md"
                          loading="eager">
                 </div>
             </div>
@@ -74,7 +74,7 @@
 
 {{-- Services Section ("Pilih Jenis Layanan") --}}
 <section class="bg-[#EEF5FB] py-10 lg:py-14">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {{-- Section Header --}}
         <div>
             <h2 class="text-2xl font-bold text-[#0F2851] tracking-tight">Pilih Jenis Layanan</h2>

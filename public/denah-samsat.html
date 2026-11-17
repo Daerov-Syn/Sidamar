@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Denah KB Samsat Surabaya Timur · Sidamar</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;color:#173e49;background:#fbf8f1;font:15px system-ui,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:16px 20px;background:#fffdf8;border-bottom:1px solid #d9d7c9}
+h1{margin:0;font-size:clamp(18px,3vw,26px);letter-spacing:-.045em}
+label{display:flex;align-items:center;gap:8px;font-weight:650}
+select,button{min-height:40px;border:1px solid #bcbdb1;border-radius:9px;background:#fffdf8;color:inherit;font:inherit;padding:5px 10px;cursor:pointer}
+select{max-width:min(65vw,290px)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px}
+nav span{font-size:12px;color:#535e5c}
+button{min-width:38px}
+#viewport{overflow:auto;max-height:66vh;overscroll-behavior:contain;scrollbar-color:#92a49f #edece1}
+svg{display:block;width:100%;height:auto;font-family:system-ui,sans-serif}
+.place{cursor:pointer;outline:none}
+.place:hover .top,.place:focus .top,.place.selected .top{stroke:#af400d;stroke-width:4;fill:#ffe0b6}
+.place.selected .badge{fill:#ad400e}
+</style>
+</head>
+<body>
+<header><h1>KB Samsat Surabaya Timur</h1><label>Tujuan <select id="destination"><option value="">Semua lokasi</option></select></label></header>
+<nav aria-label="Kontrol denah"><span>Gulir untuk menjelajahi denah.</span><div><button id="smaller" aria-label="Perkecil denah">−</button> <button id="larger" aria-label="Perbesar denah">+</button> <button id="reset">Lihat semua</button></div></nav>
+<div id="viewport" tabindex="0" aria-label="Denah yang dapat digulir">
+<svg id="plan" viewBox="0 0 2200 630" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc">
+<title id="title">Denah loket dan fasilitas Samsat Manyar</title>
+<desc id="desc">Loket berjajar di dalam gedung. Pintu masuk dan keluar berada di sisi bawah. Area cek fisik berada di kanan.</desc>
+<defs>
+ <pattern id="tiles" width="32" height="32" patternUnits="userSpaceOnUse"><rect width="32" height="32" fill="#f9f4e9"/><path d="M32 0H0V32" fill="none" stroke="#e4dece"/></pattern>
+ <g id="bench"><path d="m0 10 12-9h50l-12 9z" fill="#86a8a2"/><path d="M0 10h50v7H0z" fill="#577e79"/><path d="m50 10 12-9v7l-12 9z" fill="#40635f"/></g>
+ <g id="tree"><ellipse cx="6" cy="9" rx="21" ry="9" fill="#cfceb8"/><path d="M0 10v-26" stroke="#896c4b" stroke-width="5"/><circle cy="-17" r="17" fill="#729575"/><circle cx="-5" cy="-22" r="13" fill="#a1b997"/></g>
+</defs>
+<rect width="2200" height="630" fill="#efeadd"/>
+<path d="M26 99 56 64h1728v377l-30 30H26z" fill="#c4bcaa"/>
+<path d="M26 99h1728l30-35H56z" fill="#fdfaf4"/>
+<path d="M36 108h1708v350H36z" fill="url(#tiles)"/>
+<path d="M36 146v-38h1708v44" stroke="#9d8e75" stroke-width="6" fill="none"/>
+<path d="M36 451h545m100 0h141m115 0h807" stroke="#908674" stroke-width="9" fill="none"/>
+<g fill="#55625d" font-size="18" font-weight="700" letter-spacing="3"><text x="55" y="58">GEDUNG PELAYANAN</text><text x="1810" y="58">AREA LUAR</text></g>
+<g aria-hidden="true"><use href="#bench" x="275" y="279"/><use href="#bench" x="350" y="279"/><use href="#bench" x="1110" y="279"/><use href="#bench" x="1185" y="279"/><use href="#tree" x="2040" y="113"/><use href="#tree" x="2100" y="99"/></g>
+<g fill="none" stroke="#ca612b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M875 511v-62m-12 13 12-13 12 13"/><path d="M630 450v61m-12-13 12 13 12-13"/></g>
+<g font-size="19" font-weight="700" fill="#8a401b" text-anchor="middle"><text x="630" y="542">Pintu keluar</text><text x="875" y="542">Pintu masuk</text></g>
+<g class="place" data-id="6" role="button" tabindex="0" aria-label="6. Bank Jatim" transform="translate(48 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">6</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Bank</tspan><tspan x="7" y="68">Jatim</tspan></text>
+</g>
+<g class="place" data-id="7" role="button" tabindex="0" aria-label="7. Penyerahan STNK &amp; TNKB" transform="translate(163 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">7</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50" font-size="11">Penyerahan</tspan><tspan x="7" y="68">STNK &amp;</tspan><tspan x="7" y="86">TNKB</tspan></text>
+</g>
+<g class="place" data-id="8" role="button" tabindex="0" aria-label="8. Putor / Benman" transform="translate(263 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">8</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Putor /</tspan><tspan x="7" y="68">Benman</tspan></text>
+</g>
+<g class="place" data-id="9" role="button" tabindex="0" aria-label="9. Kasir 1–5" transform="translate(363 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">9</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Kasir 1–5</tspan></text>
+</g>
+<g class="place" data-id="10" role="button" tabindex="0" aria-label="10. Penulisan BPKB" transform="translate(463 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">10</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50" font-size="14">Penulisan</tspan><tspan x="7" y="68">BPKB</tspan></text>
+</g>
+<g class="place" data-id="11" role="button" tabindex="0" aria-label="11. Layanan Pendaftaran 5 Tahun" transform="translate(563 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">11</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68" font-size="11">Pendaftaran</tspan><tspan x="7" y="86">5 Tahun</tspan></text>
+</g>
+<g class="place" data-id="12" role="button" tabindex="0" aria-label="12. Jasa Raharja" transform="translate(663 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">12</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Jasa</tspan><tspan x="7" y="68">Raharja</tspan></text>
+</g>
+<g class="place" data-id="13" role="button" tabindex="0" aria-label="13. Layanan Informasi &amp; Progresif" transform="translate(763 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">13</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68" font-size="14">Informasi</tspan><tspan x="7" y="86">&amp;</tspan><tspan x="7" y="104">Progresif</tspan></text>
+</g>
+<g class="place" data-id="14" role="button" tabindex="0" aria-label="14. Layanan Fiskal" transform="translate(863 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">14</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68">Fiskal</tspan></text>
+</g>
+<g class="place" data-id="15" role="button" tabindex="0" aria-label="15. Layanan Mutasi Keluar" transform="translate(963 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">15</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68">Mutasi</tspan><tspan x="7" y="86">Keluar</tspan></text>
+</g>
+<g class="place" data-id="16" role="button" tabindex="0" aria-label="16. Layanan Duplikat" transform="translate(1063 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">16</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68">Duplikat</tspan></text>
+</g>
+<g class="place" data-id="17" role="button" tabindex="0" aria-label="17. Layanan Kendaraan Baru" transform="translate(1163 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">17</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68" font-size="12">Kendaraan</tspan><tspan x="7" y="86">Baru</tspan></text>
+</g>
+<g class="place" data-id="18" role="button" tabindex="0" aria-label="18. Layanan Mutasi Masuk" transform="translate(1263 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">18</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68">Mutasi</tspan><tspan x="7" y="86">Masuk</tspan></text>
+</g>
+<g class="place" data-id="19" role="button" tabindex="0" aria-label="19. Pendaftaran BBN 2 (1 Wilayah)" transform="translate(1363 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">19</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50" font-size="11">Pendaftaran</tspan><tspan x="7" y="68">BBN 2 (1</tspan><tspan x="7" y="86">Wilayah)</tspan></text>
+</g>
+<g class="place" data-id="20" role="button" tabindex="0" aria-label="20. Layanan Pengambilan BPKB" transform="translate(1463 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">20</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68" font-size="10">Pengambilan</tspan><tspan x="7" y="86">BPKB</tspan></text>
+</g>
+<g class="place" data-id="21" role="button" tabindex="0" aria-label="21. Bank BRI" transform="translate(1563 128)">
+ <path d="M0 0l8 -9h91l-8 9z" fill="#f6fbf7"/>
+ <path d="M91 0l8 -9v126l-8 9z" fill="#799c95"/>
+ <rect class="top" width="91" height="126" rx="3" fill="#e3efeb" stroke="#799c95" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#275954"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">21</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Bank BRI</tspan></text>
+</g>
+<g class="place" data-id="22" role="button" tabindex="0" aria-label="22. Pojok Baca" transform="translate(50 337)">
+ <path d="M0 0l8 -9h104l-8 9z" fill="#fff9e7"/>
+ <path d="M104 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="104" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">22</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Pojok</tspan><tspan x="7" y="68">Baca</tspan></text>
+</g>
+<g class="place" data-id="23" role="button" tabindex="0" aria-label="23. Ruang Tunggu Lansia / Ibu Hamil" transform="translate(169 337)">
+ <path d="M0 0l8 -9h175l-8 9z" fill="#fff9e7"/>
+ <path d="M175 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="175" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">23</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Ruang Tunggu</tspan><tspan x="7" y="68">Lansia / Ibu Hamil</tspan></text>
+</g>
+<g class="place" data-id="30" role="button" tabindex="0" aria-label="30. Ruang Laktasi" transform="translate(361 337)">
+ <path d="M0 0l8 -9h120l-8 9z" fill="#fff9e7"/>
+ <path d="M120 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="120" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">30</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Ruang</tspan><tspan x="7" y="68">Laktasi</tspan></text>
+</g>
+<g class="place" data-id="24" role="button" tabindex="0" aria-label="24. Smoking Area" transform="translate(688 337)">
+ <path d="M0 0l8 -9h72l-8 9z" fill="#fff9e7"/>
+ <path d="M72 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="72" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">24</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50" font-size="12">Smoking</tspan><tspan x="7" y="68">Area</tspan></text>
+</g>
+<g class="place" data-id="25" role="button" tabindex="0" aria-label="25. ATM Samsat" transform="translate(772 337)">
+ <path d="M0 0l8 -9h65l-8 9z" fill="#fff9e7"/>
+ <path d="M65 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="65" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">25</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">ATM</tspan><tspan x="7" y="68" font-size="12">Samsat</tspan></text>
+</g>
+<g class="place" data-id="26" role="button" tabindex="0" aria-label="26. Layanan Pengaduan" transform="translate(944 337)">
+ <path d="M0 0l8 -9h166l-8 9z" fill="#fff9e7"/>
+ <path d="M166 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="166" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">26</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68">Pengaduan</tspan></text>
+</g>
+<g class="place" data-id="27" role="button" tabindex="0" aria-label="27. Pemandu" transform="translate(1126 337)">
+ <path d="M0 0l8 -9h110l-8 9z" fill="#fff9e7"/>
+ <path d="M110 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="110" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">27</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Pemandu</tspan></text>
+</g>
+<g class="place" data-id="28" role="button" tabindex="0" aria-label="28. Layanan Formulir" transform="translate(1440 337)">
+ <path d="M0 0l8 -9h162l-8 9z" fill="#fff9e7"/>
+ <path d="M162 0l8 -9v100l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="162" height="100" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">28</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan Formulir</tspan></text>
+</g>
+<g class="place" data-id="29" role="button" tabindex="0" aria-label="29. Toilet Dalam" transform="translate(1668 153)">
+ <path d="M0 0l8 -9h65l-8 9z" fill="#fff9e7"/>
+ <path d="M65 0l8 -9v103l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="65" height="103" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">29</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Toilet</tspan><tspan x="7" y="68" font-size="14">Dalam</tspan></text>
+</g>
+<g class="place" data-id="4" role="button" tabindex="0" aria-label="4. Musholla" transform="translate(1810 112)">
+ <path d="M0 0l8 -9h143l-8 9z" fill="#fff9e7"/>
+ <path d="M143 0l8 -9v74l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="143" height="74" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">4</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Musholla</tspan></text>
+</g>
+<g class="place" data-id="5" role="button" tabindex="0" aria-label="5. Toilet Luar" transform="translate(1810 220)">
+ <path d="M0 0l8 -9h117l-8 9z" fill="#fff9e7"/>
+ <path d="M117 0l8 -9v75l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="117" height="75" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">5</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Toilet Luar</tspan></text>
+</g>
+<g class="place" data-id="3" role="button" tabindex="0" aria-label="3. Layanan Verifikasi Cek Fisik" transform="translate(1810 330)">
+ <path d="M0 0l8 -9h155l-8 9z" fill="#fff9e7"/>
+ <path d="M155 0l8 -9v102l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="155" height="102" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">3</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Layanan</tspan><tspan x="7" y="68">Verifikasi Cek</tspan><tspan x="7" y="86">Fisik</tspan></text>
+</g>
+<g class="place" data-id="2" role="button" tabindex="0" aria-label="2. Area Cek Fisik Roda 2" transform="translate(2000 218)">
+ <path d="M0 0l8 -9h156l-8 9z" fill="#fff9e7"/>
+ <path d="M156 0l8 -9v152l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="156" height="152" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">2</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Area Cek Fisik</tspan><tspan x="7" y="68">Roda 2</tspan></text>
+</g>
+<g class="place" data-id="1" role="button" tabindex="0" aria-label="1. Area Cek Fisik Roda 4" transform="translate(1935 455)">
+ <path d="M0 0l8 -9h221l-8 9z" fill="#fff9e7"/>
+ <path d="M221 0l8 -9v126l-8 9z" fill="#ac9c78"/>
+ <rect class="top" width="221" height="126" rx="3" fill="#f5f1df" stroke="#ac9c78" stroke-width="1.5"/>
+ <rect class="badge" x="7" y="7" width="29" height="22" rx="6" fill="#695f48"/>
+ <text x="21.5" y="23" text-anchor="middle" fill="white" font-size="15" font-weight="700">1</text>
+ <text font-size="15" font-weight="650" fill="#223c39"><tspan x="7" y="50">Area Cek Fisik Roda 4</tspan></text>
+</g></svg></div>
+<script>
+const map = document.querySelector('#plan');
+const viewport = document.querySelector('#viewport');
+const destination = document.querySelector('#destination');
+const points = new Map();
+for(const group of map.querySelectorAll('.place')){
+ const id=Number(group.dataset.id);
+ points.set(id,group);
+ group.addEventListener('click',()=>selectPoint(id));
+ group.addEventListener('keydown',event=>{
+   if(event.key==='Enter'||event.key===' '){event.preventDefault();selectPoint(id);}
+ });
+}
+for(const id of [...points.keys()].sort((a,b)=>a-b)){
+ destination.add(new Option(points.get(id).getAttribute('aria-label'),id));
+}
+const baseWidth = 2050;
+function setWidth(width){
+ map.style.width=Math.max(viewport.clientWidth,Math.min(3200,width))+'px';
+}
+function centerPoint(point){
+ const a=point.getBoundingClientRect(), b=viewport.getBoundingClientRect();
+ viewport.scrollBy({left:a.left+a.width/2-b.left-b.width/2,top:a.top+a.height/2-b.top-b.height/2,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+}
+function selectPoint(id){
+ const point=points.get(Number(id));
+ if(!point){overview();return;}
+ for(const node of points.values()) node.classList.toggle('selected',node===point);
+ destination.value=id;
+ setWidth(Math.max(baseWidth,map.clientWidth));
+ centerPoint(point);
+}
+function overview(){
+ destination.value='';
+ for(const node of points.values()) node.classList.remove('selected');
+ map.style.width='100%';
+ viewport.scrollTo(0,0);
+}
+destination.onchange=()=>selectPoint(destination.value);
+document.querySelector('#reset').onclick=overview;
+for(const [id,factor] of [['larger',1.4],['smaller',1/1.4]]){
+ document.getElementById(id).onclick=()=>{
+   setWidth(map.clientWidth*factor);
+   if(destination.value) centerPoint(points.get(Number(destination.value)));
+ };
+}
+function openLocation(){
+ const id=Number(location.hash.slice(1));
+ if(points.has(id)) selectPoint(id);
+}
+overview();
+openLocation();
+window.addEventListener('hashchange',openLocation);
+</script>
+</body>
+</html>

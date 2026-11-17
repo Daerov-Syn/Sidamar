@@ -1,6 +1,10 @@
-import Alpine from 'alpinejs';
+import Alpine from '@alpinejs/csp';
+import serviceMap from './service-map';
+import serviceDetail from './service-detail';
 
 window.Alpine = Alpine;
+Alpine.data('serviceMap', serviceMap);
+Alpine.data('serviceDetail', serviceDetail);
 Alpine.start();
 
 document.addEventListener('DOMContentLoaded', () => {

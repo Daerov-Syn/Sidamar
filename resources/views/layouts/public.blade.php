@@ -15,8 +15,8 @@
 
     <header>
         {{-- Top Contact Bar --}}
-        <div class="bg-[#072448] text-white text-[11px] sm:text-xs py-2 px-4 sm:px-6 lg:px-10 border-b border-blue-900/40">
-            <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center justify-between sm:justify-end gap-x-6 gap-y-1">
+        <div class="bg-[#072448] text-white text-[11px] sm:text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-blue-900/40">
+            <div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between sm:justify-end gap-x-6 gap-y-1">
                 <a href="tel:+6281246907164" class="inline-flex items-center gap-1.5 text-blue-200 hover:text-white transition-colors">
                     <svg class="w-3.5 h-3.5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -41,7 +41,7 @@
 
         {{-- Main Navbar --}}
         <nav class="bg-[#0B4DA2] text-white shadow-md sticky top-0 z-50" x-data="{ mobileOpen: false }">
-            <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between py-3.5">
                     {{-- Logo & Brand Text --}}
                     <a href="{{ route('beranda') }}" class="flex items-center gap-3 group">
@@ -117,7 +117,7 @@
     </header>
 
     @if(session('success'))
-        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 mt-4 w-full">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-4 w-full">
             <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl text-sm shadow-sm" role="alert">
                 {{ session('success') }}
             </div>
@@ -130,7 +130,7 @@
 
     {{-- Footer matching mockup --}}
     <footer class="bg-[#0B4DA2] text-white border-t border-blue-900/30">
-        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 pt-10 pb-6">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-blue-400/20">
                 {{-- Column 1: SiDamar Info --}}
                 <div>

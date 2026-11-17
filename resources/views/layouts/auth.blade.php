@@ -12,10 +12,11 @@
     <div class="min-h-screen md:h-screen flex flex-col md:flex-row w-full bg-white shadow-2xl overflow-x-hidden md:overflow-hidden">
 
         <!-- PANEL KIRI: Banner Maskot & Ilustrasi (Desktop & Tablet) -->
-        <aside class="hidden md:flex md:w-5/12 lg:w-1/2 bg-[#0D47A1] relative items-center justify-center overflow-hidden select-none h-full p-0">
+        <aside class="hidden md:flex bg-[#0D47A1] relative items-center justify-center select-none h-full p-0 overflow-hidden shrink-0"
+               style="width: min(48vw, calc(100vh * (1836 / 2716)));">
             <img src="{{ asset('images/sidamar-admin-banner-clean.png') }}"
                  alt="SiDamar Admin Portal"
-                 class="w-full h-full object-cover object-center block select-none pointer-events-none transition-transform duration-700 hover:scale-[1.01]">
+                 class="w-full h-full object-cover object-center block select-none pointer-events-none transition-transform duration-500 hover:scale-[1.01]">
         </aside>
 
         <!-- HEADER MOBILE: Banner Maskot Khusus Layar HP (< 768px) -->
@@ -42,7 +43,7 @@
         </header>
 
         <!-- PANEL KANAN: Form Adaptif -->
-        <main class="w-full md:w-7/12 lg:w-1/2 flex flex-col h-full bg-white flex-1 relative overflow-y-auto">
+        <main class="flex-1 flex flex-col h-full bg-white relative overflow-y-auto">
             <!-- Navigasi Kembali ke Portal Publik -->
             <div class="p-5 sm:p-6 lg:p-8 pb-0 flex items-center justify-between">
                 <a href="{{ route('beranda') }}"
