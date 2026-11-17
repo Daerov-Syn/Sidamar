@@ -11,11 +11,9 @@ auth.json
 node_modules
 vendor
 tests
-storage
-bootstrap/cache
-public/build
-public/storage
+storage/logs
+storage/framework
 public/hot
-database/*.sqlite*
 **/*.sql
+**/*.sqlite*
 **/*.log
