@@ -25,7 +25,10 @@
 !tailwind.config.js
 !vite.config.js
 !Caddyfile
+!Dockerfile
 !Dockerfile.vercel
+!docker-entrypoint.sh
+!railway.json
 bootstrap/cache/**
 public/build/**
 public/storage/**
