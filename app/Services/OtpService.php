@@ -34,17 +34,19 @@ class OtpService
         ]);
 
         // Kirim email (pastikan MAIL_ config sudah diisi di .env)
+        if (config('mail.default') === 'log' || (config('mail.default') === 'smtp' && empty(config('mail.mailers.smtp.password')))) {
+            session()->flash('dev_otp_code', $kode);
+            return;
+        }
+
         try {
             Mail::to($admin->email)->send(new OtpMail($kode, $admin->username));
         } catch (\Throwable $e) {
             \Illuminate\Support\Facades\Log::error('Gagal mengirim email OTP: ' . $e->getMessage());
 
-            // Jika gagal kirim via SMTP (misal password SMTP belum diisi),
-            // berikan fallback di mode lokal agar sistem tidak crash 500
-            if (app()->environment('local')) {
-                session()->flash('dev_otp_code', $kode);
-                session()->flash('otp_mail_error', $e->getMessage());
-            }
+            // Fallback: tampilkan kode OTP di halaman agar admin tetap bisa login
+            session()->flash('dev_otp_code', $kode);
+            session()->flash('otp_mail_error', $e->getMessage());
         }
     }
 

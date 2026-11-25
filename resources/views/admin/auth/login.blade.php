@@ -118,6 +118,4 @@
         }
     }
 </script>
-    </form>
-</div>
 @endsection

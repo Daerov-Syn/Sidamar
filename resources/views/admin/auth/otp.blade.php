@@ -20,10 +20,14 @@
                 <svg class="w-4 h-4 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                 </svg>
-                <span>Info Pengiriman Email (SMTP Google):</span>
+                <span>Info Pengiriman Email (SMTP):</span>
             </div>
             <p class="text-xs text-amber-700 mb-2 leading-relaxed">
-                Google SMTP menolak koneksi karena <strong>App Password Gmail</strong> belum dimasukkan di file <code>.env</code>. Agar Anda tetap dapat login sekarang, gunakan kode OTP berikut:
+                @if(session('otp_mail_error'))
+                    Pengiriman email OTP gagal ({{ session('otp_mail_error') }}). Agar Anda tetap dapat login sekarang, gunakan kode OTP berikut:
+                @else
+                    Mailer saat ini dalam mode <code>log</code> atau konfigurasi SMTP belum lengkap. Agar Anda tetap dapat login sekarang, gunakan kode OTP berikut:
+                @endif
             </p>
             <div class="text-center font-mono font-bold text-xl sm:text-2xl tracking-widest text-primary-800 bg-white py-2 rounded-lg border border-amber-200 shadow-sm">
                 {{ session('dev_otp_code') }}
